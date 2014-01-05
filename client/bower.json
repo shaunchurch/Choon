@@ -1,0 +1,10 @@
+{
+  "name": "Substrata",
+  "version": "0.0.1",
+  "dependencies": {
+    "zepto": "latest",
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2"
+  },
+  "devDependencies": {}
+}

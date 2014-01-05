@@ -1,0 +1,89 @@
+// pull in Substrata library
+@import 'less/substrata.less';
+
+/*** [ Example Layout ] ***/
+
+/* ==========================================================[ Base Styles - all viewports ]=== */
+
+@padding: 20px;
+@colour-text: #F6f6f6;
+
+body {
+	margin: 0;
+	background: #272727;
+	height: 100%;
+}
+
+header {
+	background-color: rgba(0,0,0,.85);
+	color: @colour-text;
+	padding-left: @padding*2;
+	padding-bottom: @padding/2;
+
+	.transition(all .6s);
+}
+header.expanded {
+	height: 100%;
+	h1.title {
+		line-height: 500px;
+	}
+}
+
+h1.title {
+	display: inline-block;
+	font-weight: 100;
+	line-height: 80px;
+	font-size: 26px;
+	.transition(all .6s);
+}
+form.username {
+	display: inline-block;
+}
+input.username {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #666666;
+	font-size: 23px;
+	font-weight: 100;
+	margin-left: 12px;
+	color: @colour-text;
+	padding: 0 @padding/4;
+	-webkit-outline: none;
+	outline: none;
+}
+
+.main {
+	position: relative;
+}
+
+.loading {
+	content: '';
+	opacity: 0;
+	background-color: transparent;
+	height: 100%;
+	overflow: auto;
+	min-height: 400px;
+	position: absolute;
+	height: 200px;
+	width: 100%;
+	margin: 100px auto;
+	top: 0;
+	.transition(opacity .6s);
+}
+
+.loading.active {
+	background-image: url('../images/ajax-loader.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%; 
+	opacity: 1;
+}
+
+.albumcover {
+	width: 25%;
+	height: auto;
+}
+
+/*** [ End Example ] ***/
+
+/* Debug */
+/*div, section, header, footer, aside { border: 1px solid red; }*/
